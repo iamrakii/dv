@@ -1,0 +1,44 @@
+Step 1: Connect to Data
+1. Open Tableau Desktop.
+2. Connect to Your Data Source:
+a) Click on Connect on the left sidebar.
+b) Choose your data source by selecting text file and load your vgsales dataset into Tableau.
+Step 2: Create a Basic Visualization Create a New Worksheet:
+a) Click on the Sheet tab at the bottom of the screen.
+Drag Fields to Shelves:
+a) Drag Year to the Columns shelf.
+b) Drag Global Sales to the Rows shelf.
+c) Drag EU Sales to the Rows shelf. That gives the line graph visualization.
+ Change Visualization Type:
+In the Show Me panel on the right, select a bar chart or any other type that suits your needs.
+Step 3: Format the Chart
+ Format Axes:
+a) Right-click on the Global Sales axis and select Format.
+b) In the Format pane, adjust the font style & size as needed.
+ Add Titles and Annotations:
+a) Click on the chart title area and enter a descriptive title - Global Sales by Year.
+b) Add annotations if needed to highlight specific data points – Right click the on the chart which you want to highlight - Select Annotate - Select Mark - Press Ok
+Step 4: Add Filters
+Add a Filter for Year:
+Drag Year to the Filters shelf.
+Choose the range of years you want to display (e.g., 2000-2016).
+Step 5: Create Calculated Fields
+ Create a Calculated Field for Sales Category:
+a) Right-click on Global Sales - Select Create - Calculated Field.
+b) Give name to your calculations as Global Sales - EU Sales
+c) Do calculations as per your need - [Global Sales] - [EU Sales]
+d) Press Ok
+Add Calculated Fields to Visualization:
+a) Drag Global Sales-EU Sales to the Rows shelf to show Global Sales over Year with Global Sales-EU Sales over Year.
+Step 6: Create a Parameter:
+Name: "Select Genre"
+ Data Type: String
+ Values: List (e.g., "Action", "Adventure", "Shooter") or Add values from Genre.
+ Create a Calculated Field:
+ Name: "Sales by Genre"
+ Formula:
+ IF [Genre] = [Select Genre] THEN [Global Sales] ELSE 0 END
+Build the Visualization:
+ Columns: Drag "Year".
+ Rows: Drag "Sales by Genre".
+ At the right side of your sheet you can select required Genre and can see different Visualization Visualization by Genre: Fighting

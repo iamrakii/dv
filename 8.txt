@@ -1,0 +1,18 @@
+Filters remove all but the data you want to focus on.
+Filter Pane: You can apply filters in the Filters pane, or make selections in slicers directly on the report page itself. The Filters pane shows the fields in individual visuals and any other filters the report designer adds.
+There are four standard types of filters that you create in the Filters pane.
+ Visual filter applies to a single visual on a report page. You see visual-level filters when you select a visual on the report canvas. Even if you can't edit a report, you can select a visual and filter it.
+ Page filter applies to all the visuals on the report page.
+ Report filter applies to all pages in the report.
+ Drill through filter With drill through in the Power BI service and Power BI Desktop, you create a destination report page that focuses on a specific entity, such as a supplier. From the other report pages, users can right-click a data point for that entity and drill through to the focused page.
+Let’s apply filter for department (Particular visual).
+1. Drag Department from Data Pane to Filters  Filters on this page textbox.  Basic Filtering
+2. Now, you can see, HR dept. is selected and now in below picture, you can see that only HR data is visible, whereas, R&D and Sales data will not be shown.
+3. Now, let’s try for advanced filter
+Let’s find out results for salary greater than equal to 10000.
+Drag and drop Monthly Income in filter Filter type: advanced filtering
+Show items when the value: is greater than or equal to Value: 10000
+4. Now, try for Top N filtering. Try to display top 4 Job roles having highest job satisfaction.
+ Select “Job satisfaction rating” visual  In Filters Pane, Filters on this visual 
+Job Role Filter type: Top N Show item: Top : 4
+By value: Sum of Job Satisfaction

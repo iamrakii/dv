@@ -1,0 +1,41 @@
+17 Most Common Charts available in Power BI:
+● Bar Chart
+● Line Chart
+● Scatterplot
+● Sparkline
+● Pie Chart
+● Gauge
+● Waterfall Chart
+● Funnel Chart
+● Heat Map / Matrix
+● Histogram
+● Box Plot
+● Maps
+● Tables
+● Indicators
+● Area Chart
+● Radar or Spider Chart
+● Tree Map
+● Open Power BI Desktop
+● Click on Get data in ribbon pane
+● Click on Excel worksheet option
+ Then, we have to create new column for attrition count. For this, select attrition column
+ click on Add Column  new window will open then add details as follows. Once you are done with this, attrition count column will be added as a last row of the table
+ Change the datatype of this column to whole number
+ Click on Close & Apply.
+ You will be back on canvas area with table loaded in Data Pane (in right side).
+ We will start with KPI Chart
+ A Key Performance Indicator (KPI) is a visual cue that communicates the amount of progress made toward a measurable goal
+AY 2024 - 2025 DATA VISUALIZATION LAB
+64
+Now format this particular visual with title, size, colour.
+1. Click on “Format your visual” in Visualization Pane
+2. Go to General tab
+a. click on Title  type “Overall Employees” in Text box, Horizontal alignment and colour of your choice
+b. expand effects  OFF the background of KPI chart
+c. Effects  ON visual border  change the color and 20 rounded corners
+3. Now, go to Visual tab  OFF the category label
+4. In visual tab, callout value  change the font color
+Optional: As you can see, age is not sorted correctly, so we have to create additional
+column.
+Slicers: A slicer is a standalone chart that can be used to filter the other visuals on the page. Slicers come in many different formats (category, range, date, etc.) and can be formatted to allow selection of only one, many, or all of the available values.

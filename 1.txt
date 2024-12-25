@@ -1,0 +1,54 @@
+Working with Tableau that focuses on understanding the Tableau Workspace, Tableau terminologies, and basic functionalities.
+Dataset used: vgsales.csv
+1. Go to Start Page: Toggle between the active sheet and the Desktop Start Page.
+2. Data Pane: Includes dimensions and measures, populated from your selected data source. May also include calculated fields, parameters, or sets.
+3. Analytics Pane: Includes options you can use to apply reference lines, forecasts, trend lines, to add totals to crosstabs, and to build boxplots.
+4. Workbook Name: The file name of our workbook.
+5. View Cards: Used for modifying the worksheet.
+6. Toolbar Icons: Icons are available for quick access to popular features.
+7. Worksheet/View: Workspace for building your visualizations.
+8. Go to Data Source: Returns you to the data source specification page.
+9. Worksheet Tabs: Click to view a specific worksheet, dashboard, or story
+10. New Worksheet, Dashboard, and Story Tabs: Click to create a new Worksheet, Dashboard, or Story.
+11. Status Bar: Displays data about the fields and marks included in the view.
+
+Steps:
+1. Tableau Workspace Setup:
+ Connect to Data:
+ Open Tableau, and on the "Start Page," select Connect -> To a File -> Text File.
+ Browse to the location of vgsales.csv and open it.
+ Data Preview:
+ After loading, Tableau will show a preview of the data. You can rename columns if necessary.
+ Click on the "Sheet 1" tab at the bottom to go to your first worksheet.
+
+2. Tableau Terminologies:
+ Dimensions: These are qualitative fields. In vgsales.csv, examples include Platform, Genre,and Publisher.
+ Measures: These are quantitative fields used for calculations. Examples are Global_Sales, NA_Sales, and Year.
+ Rows and Columns Shelf: Drag dimensions and measures to the Rows or Columns shelves to build the structure of your visualization.
+ Marks: Controls the appearance of the data. You can set marks to be circles, bars, or other shapes and control size, color, and label.
+ Filters: Used to limit the data displayed in the view.
+ Pages Shelf: Used for creating animations or segmenting your view by categories.
+3. Basic Functionalities:
+a. Basic Visualization (Bar Chart of Global Sales by Genre):
+ In your worksheet, drag Genre to the Columns shelf.
+ Drag Global_Sales to the Rows shelf.
+ You should see a bar chart. If the data isn’t aggregating correctly, check if the aggregation is set to SUM by right-clicking Global_Sales -> Measure -> Sum.
+b. Sorting:
+ Click on the Global_Sales axis and sort descending to show the genres with the most sales first.
+c. Filtering:
+ Drag Year to the Filters shelf.
+ Choose the range of years you want to display (e.g., 2000-2016).
+ Add Year to the Pages shelf to create a dynamic view of how sales changed over time.
+4. Additional Functionalities:
+Dashboards: Combine different sheets to create a comprehensive dashboard. Go to the Dashboard tab, drag your created sheets to the layout, and arrange them accordingly.
+a. Add one more worksheet - Global Sales Trend by Year
+ Drag Year to the Columns.
+ Drag Global_Sales to the Rows.
+ Create a line chart to show how global sales have trended over time.
+ Add Genere to the Marks
+ Apply color to Genere
+b. Go to the Dashboard tab in Tableau.
+c. Add multiple visualizations to a single dashboard. (To increase dashboard size - select size-Automatic)
+d. Arrange charts (e.g., a line chart for yearly sales, a bar chart for top genres, etc.).
+
+

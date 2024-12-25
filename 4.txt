@@ -1,0 +1,17 @@
+CREATING A STORY WITH TABLEAU PUBLIC
+With Tableau public, you are able to organize your data in order to tell a meaningful story. This is beneficial when you are doing a presentation, creating an article, or uploading to a website, as it helps your audience understand your data.
+Stories are created through assembling the different worksheets and dashboards. We can highlight important data points, add text box and pictures to help convey our story. However, there are many different ways to tell a story. For example, one technique is called “tailoring in” where the story starts with a big picture view and zooms in on a specific detail.
+In contrast, a story can also be told by starting with a case and zooming out to that big picture view. We are going to return to our health expenditure worksheets to create a tailoring in story and illustrate the changes in Canada’s spending in a meaningful way.
+To begin, select “New Story” at the bottom right of your screen.
+Drag “Sheet 1” and “Sheet 2” on to “Drag a sheet here”. We can rename each storyboardby clicking “Add a caption”. Rename Sheet 1 to “Provincial Health Expenditure in 2016”.
+AY: 2024 – 25 Data Visualization Lab (BAIL504)
+35
+Use the arrows located on the side of the caption field to navigate to Sheet 2. Click on “Add a caption” and rename Sheet 2 to “Provincial Health Expenditure from 1975-2018”.
+AY: 2024 – 25 Data Visualization Lab (BAIL504)
+36
+In this story, we are going to narrow in and draw attention to the province or territory that is spending the most amount of money on health. Drag an additional copy of “Sheet 1” and drop it between the two existing sheets. Select “Add a caption” and rename it to “Ontario”.
+On the map, click on the province Ontario and then navigate to the caption field andselect “Update”. Your screen will show Ontario highlighted from the rest of Canada
+Select the right arrow to navigate to “Provincial Health Expenditure from 1975-2018”. Hover over the line representing Ontario and select the data point representing health expenditure during the year 2016. Then click “Update”. Your screen should look like this:
+We can add a textbox to label the highlighted pointed by dragging “Drag to add text” onto the line graph. Write a key message in the textbox, such as “Ontario had the highest health expenditure in Canada in 2016, spending $87,195.70M”. Select “OK”.
+You can the edit the text box by selecting “More options” which will open a drop-downmenu. Expand the text box by dragging the borders in order to show the full message.
+We have now created a story with three sheets of how Ontario had the highest health expenditure in the year 2016. If you choose to add a dashboard, it will allow your audience to play with data. You can navigate between the story as shown below:

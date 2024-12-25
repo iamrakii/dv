@@ -1,0 +1,56 @@
+Dataset used: Tableau Joins File: Contains 3 sheets : Demographics, Salary, Job Title
+1. Connecting to Excel Files in Tableau:
+ Open Tableau and click on Connect in the left pane.
+ Under To a File, choose Microsoft Excel.
+ Browse and select your Excel file (Tableau Joins File.xlsx).
+ Tableau will display the sheets from the Excel file in the Data Source tab.
+ Drag the relevant sheets to the workspace.
+2. Tableau Joins File.xlsx Dataset: has three Excel sheets
+ Demographics:
+ EmployeeID
+ NameofEmployee
+ EmployeeAge
+ EmployeeGender
+ Salary:
+ EmployeeID
+ EmployeeSalary
+These sheets have a relationship based on the EmployeeID, and you can join them using this field.
+Drag and drop Demographics table- Right click-select open- that allows you to do following types of joins.
+Now Drag and drop Salary table - That allows you to do join of your choice.
+3. Types of Joins in Tableau:
+Once both tables are in the Data Source tab, Tableau automatically suggests an inner join, but you can modify the type of join depending on the scenario.
+a. Inner Join:
+ Description: Returns only records where there is a match in both tables.
+ How to Create in Tableau:
+ Drag Demographics and Salary sheets into the canvas.
+ Tableau automatically detects the common field (EmployeeID). If not, manually select it.
+ Choose Inner Join in the Join Type options.
+ Result: You will see only employees whose employee id matches in both Demographics and Salary table.
+ b. Left Join:
+ Description: Returns all records from the left table (Demographics), and matched records from the right table (salary). If there’s no match, NULL values are returned for fields from the right table.
+ How to Create in Tableau:
+ In the join settings, select Left Join.
+ Result: All employees will be returned, even if data missing in Salary. Salary information will be NULL for those without a match.
+c. Right Join:
+ Description: Returns all records from the right table (Salary), and matched records from the left table (Demographics). If there’s no match, NULL values are returned for fields from the left table.
+ How to Create in Tableau:
+ Select Right Join.
+ Result: You will see all salary, even if they don't have employee id. Employee information will be NULL for those salary with no matching employee id.
+d. Full Outer Join:
+ Description: Returns all records when there is a match in either the left (Demographics) or right (Job Title) table. If there’s no match, NULL values are returned for the missing side.
+ How to Create in Tableau:
+ Select Full Outer Join.
+ Result: You will see all employees and all salary, even if they don’t have a match in the other table. NULL values will appear where there’s no corresponding record.
+AY: 2024 – 25 Data Visualization Lab (BAIL504)
+26
+4. Creating a Visualization Based on Joins:
+After performing the joins, you can build different visualizations. Press on Sheet 1:
+For example:
+ Bar Chart: Number of employees and their salary.
+ Drag NameofEmployee to Columns.
+ Drag EmployeeSalary to Rows.
+
+This chart will display the number of employees and their salary based on the type of
+ join.Sort it in decending
+ Drag EmployeeSalary to Marks - Select color Color, Label
+

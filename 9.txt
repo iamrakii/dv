@@ -1,0 +1,91 @@
+Analysis of revenue in sales dataset:
+i) Create a choropleth map (fill the map) to spot the special trends to show the state which has the highest revenue.
+ii) Create a line chart to show the revenue based on the month of the year.
+iii) Create a bin of size 10 for the age measure to create a new dimension to show the revenue.
+iv) Create a donut chart view to show the percentage of revenue per region by creating zero access in the calculated field.
+v) Create a butterfly chart by reversing the bar chart to compare female & male revenue based on product category.
+vi) Create a calculated field to show the average revenue per state & display profitable & non-profitable state.
+vii) Build a dashboard.
+Solution:
+Step1: Upload the revenue dataset
+Step2: In the power query editor as part of transformation remove the unnecessary columns (Remove the last null column)
+Question 1: Create a choropleth map (fill the map) to spot the special trends to show the state which has the highest revenue.
+Step1: Select the "Map" visualization from the Visualizations pane.(filled map) Step2: Set Up the Map:
+ Drag the state field to the "Location" field well.
+ Drag the revenue field to the "Size" or "Values" field well.
+Step3: Customize: In the "Format" pane, adjust settings such as color, size, and tooltips to enhance readability. You can use color gradients to indicate different revenue levels, helping to spot trends.
+Question 2: Create a line chart to show the revenue based on the month of the year.
+Step1: Add a Line Chart: Select the "Line chart" visualization from the Visualizations pane.
+Step2: Configure the Chart:
+ Drag the month field to the "Axis" field well.
+ Drag the revenue field to the "Values" field well.
+Step3: Format: In the "Format" pane, you can customize the line color, axis titles, and other aspects to clearly present the revenue trend throughout the year
+AY 2024 - 2025 DATA VISUALIZATION LAB
+75
+Question 2: Create a line chart to show the revenue based on the month of the year.
+Step1: Add a Line Chart: Select the "Line chart" visualization from the Visualizations pane.
+Step2: Configure the Chart:
+ Drag the month field to the "Axis" field well.
+ Drag the revenue field to the "Values" field well.
+Step3: Format: In the "Format" pane, you can customize the line color, axis titles, and other aspects to clearly present the revenue trend throughout the year
+.
+Question 3: Create a bin of size 10 for the age measure to create a new dimension to show the revenue.
+Step1: Create Bins for age
+ Go to the "Data" view and select the age field.
+ Right-click on the age field and choose "New group".
+ In the "Group" window, select "Bin" and set the bin size to 10.
+Step2: Add to Visualization:
+ Create a new visualization (e.g., bar chart or column chart). Here we used Stacked column chart. Drag the new age bins field to the "X Axis" and the revenue field to the "Y axis”.
+Question 4: Create a donut chart view to show the percentage of revenue per region by creating zero access in the calculated field.
+Step1: Add a Donut Chart: Select the "Donut chart" visualization from the Visualizations pane.
+Step2: Set Up the Chart:
+ Drag the region field to the "Legend" field well.
+ Drag the revenue field to the "Values" field well.
+Step3: Create Zero Access:
+ Go to the "Format" pane, select "Detail labels", and set the "Label position" to "Inside" to create a zero access effect.
+ Adjust the "Detail" and "Percentage" settings as needed.
+Question 5: Create a butterfly chart by reversing the bar chart to compare female & male revenue based on product category.
+Step1: Create a New Measure TotalRevenue = sum(SalesTable[Revenue])
+Method-1: By using stacked column chart
+Method 2:
+Step 1:
+Add Two Bar Charts:
+o Create two separate bar charts from the "Visualizations" pane.
+Step 2:
+Configure the First Bar Chart (e.g., Female Revenue): Drag ProductCategory to the "Axis" field.
+Drag TotalRevenue to the "Values" field.
+Apply a Filter:
+ In the "Filters" pane, add a filter to show only Female revenue. You can drag Gender to the "Filters" pane and set the filter to include only Female.
+Step 3:
+Configure the Second Bar Chart (e.g., Male Revenue):
+Drag ProductCategory to the "Axis" field. Drag TotalRevenue to the "Values" field. Apply a Filter:
+ In the "Filters" pane, add a filter to show only Male revenue. You can drag Gender to the "Filters" pane and set the filter to include only Male.
+Step 4:
+Reversing the Bars:
+ To create the butterfly effect, you need to reverse one of the bar charts. This involves adjusting the direction of the bars so that they face opposite directions from the center.
+o Reverse the Bars:
+ For one of the charts (e.g., Male revenue), you will need to use a calculated column or measure to make the bars extend in the opposite direction. In Power BI, this can be achieved by adjusting the data in the chart's settings or using custom visualizations if necessary.
+Add Titles and Labels:
+ Add clear titles and labels to each chart to indicate what data they represent (e.g., "Female Revenue" and "Male Revenue").
+ Customize the chart's appearance to enhance readability.
+Question 6: Create a calculated field to show the average revenue per state & display profitable & non-profitable state.
+Step1: Create a New Measure
+ Go to the Modeling tab and select "New Measure".
+AY 2024 - 2025 DATA VISUALIZATION LAB
+79
+ Create the Average Revenue Measure:
+ Enter the following DAX formula to calculate the average revenue per state:
+AverageRevenuePerState = AVERAGEX(
+VALUES(SalesTable[State]), CALCULATE(SUM(SalesTable[Revenue]))
+)
+Step2: Create a Calculated Column to Categorize States
+Next, create a calculated column to classify states as profitable or non-profitable based on the average revenue.
+1. Go to the Modeling tab and select "New Column".
+2. Create the Profitability Column:
+Enter the following DAX formula to create a column that categorizes states as profitable or non-profitable:
+ProfitabilityStatus = IF(SalesTable[AverageRevenuePerState] > 1000,
+"Profitable", "Non-Profitable"
+)
+Step 3: Display the Results
+Question 7: Build a dashboard.
+
